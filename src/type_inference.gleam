@@ -1,4 +1,3 @@
-import gleam/io
 import gleam/int
 import gleam/list
 import gleam/bool
@@ -6,6 +5,7 @@ import gleam/pair
 import gleam/dict.{type Dict}
 import gleam/result.{try}
 import gleam/option.{type Option, None, Some}
+import pprint
 
 // ---- TYPES ------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ pub fn main() {
     body: EApply(EVariable("add"), [EInt(1), EInt(2)]),
   )
   |> infer_expression(initial_environment())
-  |> io.debug
+  |> pprint.debug
   Nil
 }
 
