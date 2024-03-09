@@ -92,6 +92,7 @@ pub fn main() {
 
 /// Takes an expression and returns the same expression with type annotations
 /// inferred and filled in, or an error if type checking failed.
+///
 fn infer_expression(
   expression: Expression,
   environment: Environment,
